@@ -2,7 +2,9 @@
   "name": "@shoplify/core",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "storybook": "nx storybook"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
