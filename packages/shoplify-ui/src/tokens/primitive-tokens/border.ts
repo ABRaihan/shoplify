@@ -1,0 +1,16 @@
+export const border = {
+  'radius-0': '0px',
+  'radius-50': '2px',
+  'radius-100': '4px',
+  'radius-150': '6px',
+  'radius-200': '8px',
+  'radius-300': '12px',
+  'radius-400': '16px',
+  'radius-500': '20px',
+  'radius-750': '30px',
+  'radius-full': '9999px',
+  'width-15': '0.66px',
+  'width-25': '1px',
+  'width-50': '4px',
+  'width-100': '6px',
+};
