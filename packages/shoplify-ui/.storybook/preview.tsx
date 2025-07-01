@@ -3,18 +3,17 @@ import { ThemeProvider } from 'styled-components';
 
 import { Preview } from '@storybook/react';
 import { createGlobalStyle } from 'styled-components';
-import { lightTheme } from '../src/tokens';
+import { theme } from "../src/tokens";
 
-const theme = lightTheme;
 
 const GlobalStyles = createGlobalStyle`
   body {
-    font-family: ${theme.typography.family.sans};
+    font-family: ${theme.light.typography.family.sans};
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: ${theme.colors.bg}; 
-    color: ${theme.colors.text};
+    background-color: ${theme.light.colors.bg}; 
+    color: ${theme.light.colors.text};
   }
 `;
 
@@ -30,7 +29,7 @@ export const parameters = {
 
 export const decorators: Preview['decorators'] = [
   (Story, context) => (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme.light}>
       <GlobalStyles />
       <Story {...context.args} />
     </ThemeProvider>

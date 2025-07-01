@@ -9,19 +9,21 @@ import { shadow } from './primitive-tokens/shadow';
 import { space } from './primitive-tokens/space';
 import { font } from './primitive-tokens/typography';
 
-export const lightTheme = {
-  border: {
-    ...lightThemeBorder,
-    ...border,
+export const theme = {
+  light: {
+    border: {
+      ...lightThemeBorder,
+      ...border,
+    },
+    colors: { ...lightThemeColor, ...color },
+    shadow: {
+      ...lightThemeShadow,
+      ...shadow,
+    },
+    space: {
+      ...lightThemeSpace,
+      ...space,
+    },
+    typography: { ...lightThemeTypography, ...font },
   },
-  colors: { ...lightThemeColor, ...color },
-  shadow: {
-    ...lightThemeShadow,
-    ...shadow,
-  },
-  space: {
-    ...lightThemeSpace,
-    ...space,
-  },
-  typography: { ...lightThemeTypography, ...font },
-};
+} as const;
